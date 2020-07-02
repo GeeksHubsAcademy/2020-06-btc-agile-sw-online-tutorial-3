@@ -16,6 +16,9 @@
  * @return  true when input is palindrome and false if doesn't was
  */
 export function isPalindrome(input: string): boolean {
+    if (typeof(input) !== 'string')
+        throw new TypeError('Input input: must be a string value')
+
     const length = input.length - 1;
 
     const limit = Math.floor(length / 2) + 1

@@ -76,5 +76,16 @@ describe('Testing for kata2', function () {
         expect(result).toBeFalsy();
     });
 
+    test.each([
+        undefined,
+        null,
+    ])('isPalindrome - Invalid input: %s', function (input) {
+        // Act
+        const invalidInputErrorCall = () => isPalindrome(input)
+        // Assert
+        const expectedError = new TypeError('Input input: must be a string value')
+        expect(invalidInputErrorCall).toThrowError(expectedError)
+    });
+
 });
 
