@@ -1,2 +1,3 @@
-export function xxxxxx(yyyy:hhhh) : zzzzzz {
+export function palindromo(input:string) : boolean {
+    return false;
 }

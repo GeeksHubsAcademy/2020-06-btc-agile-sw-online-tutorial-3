@@ -1,12 +1,12 @@
-import { xxxxx } from "../../../../../src/es/geekshubs/academy/kata2/puzzle";
+import { palindromo } from "../../../../../src/es/geekshubs/academy/kata2/puzzle";
 
 describe('Testing for kata2', function (){
 
-    test('xxxxxx - Size: 0', function () {
+    test('Palindromo - Size: 0', function () {
         //Arrange
         var expected = null;
         //Act
-        var result = xxxxxx("");
+        var result = palindromo("");
         //Assert
         expect(result).toBe(expected);
     });
