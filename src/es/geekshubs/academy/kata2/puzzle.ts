@@ -15,7 +15,7 @@
  * @param   input  the word to check if is palindrome
  * @return  true when input is palindrome and false if doesn't was
  */
-export function palindromo(input: string): boolean {
+export function isPalindrome(input: string): boolean {
     const length = input.length - 1;
 
     const limit = Math.floor(length / 2) + 1

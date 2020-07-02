@@ -1,77 +1,77 @@
-import {palindromo} from "../../../../../src/es/geekshubs/academy/kata2/puzzle";
+import { isPalindrome } from "../../../../../src/es/geekshubs/academy/kata2/puzzle";
 
 describe('Testing for kata2', function () {
 
-    test('palindromo - Size: 0 | \"\" === \"\"', function () {
+    test('isPalindrome - Size: 0 | \"\" === \"\"', function () {
         //Act
-        const result = palindromo("");
+        const result = isPalindrome("");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    test('palindromo - Size: 1 | a === a', function () {
+    test('isPalindrome - Size: 1 | a === a', function () {
         //Arrange
         //var expected = true;
         //Act
-        const result = palindromo("");
+        const result = isPalindrome("");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    test('palindromo - Size: 2 | aa === aa', function () {
+    test('isPalindrome - Size: 2 | aa === aa', function () {
         //Act
-        const result = palindromo("aa");
+        const result = isPalindrome("aa");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    test('palindromo - Size: 2 | ab != ba', function () {
+    test('isPalindrome - Size: 2 | ab != ba', function () {
         //Arrange
        // var expected = false;
         //Act
-        const result = palindromo("ab");
+        const result = isPalindrome("ab");
         //Assert
         expect(result).toBeFalsy();
     });
 
-     test('palindromo - Size: 2 | ba != ab', function () {
+     test('isPalindrome - Size: 2 | ba != ab', function () {
         //Act
-         const result = palindromo("ba");
+         const result = isPalindrome("ba");
         //Assert
         expect(result).toBeFalsy();
     });
 
-    test('palindromo - Size: 2 | bb === bb', function () {
+    test('isPalindrome - Size: 2 | bb === bb', function () {
         //Act
-        const result = palindromo("bb");
+        const result = isPalindrome("bb");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    test('palindromo - Size: 3 |  aba === aba', function () {
+    test('isPalindrome - Size: 3 |  aba === aba', function () {
         //Act
-        const result = palindromo("aba");
+        const result = isPalindrome("aba");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    test('palindromo - Size: 3 | abc != cba', function () {
+    test('isPalindrome - Size: 3 | abc != cba', function () {
         //Act
-        const result = palindromo("abc");
+        const result = isPalindrome("abc");
         //Assert
         expect(result).toBeFalsy();
     });
 
-    test('palindromo - Size: 7 | rotator === rotator', function () {
+    test('isPalindrome - Size: 7 | rotator === rotator', function () {
         //Act
-        const result = palindromo("rotator");
+        const result = isPalindrome("rotator");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    test('palindromo - Size: 7 | rovggatop != potaggvor', function () {
+    test('isPalindrome - Size: 7 | rovggatop != potaggvor', function () {
         //Act
-        const result = palindromo("rovggatop");
+        const result = isPalindrome("rovggatop");
         //Assert
         expect(result).toBeFalsy();
     });
