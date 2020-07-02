@@ -16,5 +16,6 @@ export function palindromo(input:string) : boolean {
     for(var i = length; i >= 0 ;i--) 
         res += input.charAt(i);
 
-    return res === input;
+    //return res === input;
+    return false;
 }
