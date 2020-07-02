@@ -31,18 +31,18 @@ describe('Testing for kata2', function (){
         expect(result).toBe(expected);
     });
 
-    test('Palindromo - Size: 2 | ab === ba', function () {
+    test('Palindromo - Size: 2 | ab != ba', function () {
         //Arrange
-        var expected = true;
+        var expected = false;
         //Act
         var result = palindromo("ab");
         //Assert
         expect(result).toBe(expected);
     });
 
-     test('Palindromo - Size: 2 | ba === ab', function () {
+     test('Palindromo - Size: 2 | ba != ab', function () {
         //Arrange
-        var expected = true;
+        var expected = false;
         //Act
         var result = palindromo("ba");
         //Assert
@@ -67,9 +67,9 @@ describe('Testing for kata2', function (){
         expect(result).toBe(expected);
     });
 
-    test('Palindromo - Size: 3 | abc === cba', function () {
+    test('Palindromo - Size: 3 | abc != cba', function () {
         //Arrange
-        var expected = true;
+        var expected = false;
         //Act
         var result = palindromo("abc");
         //Assert
