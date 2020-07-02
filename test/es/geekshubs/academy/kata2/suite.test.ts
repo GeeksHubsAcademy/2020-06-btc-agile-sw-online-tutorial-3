@@ -1,99 +1,80 @@
-import { palindromo } from "../../../../../src/es/geekshubs/academy/kata2/puzzle";
+import {palindromo} from "../../../../../src/es/geekshubs/academy/kata2/puzzle";
 
-describe('Testing for kata2', function (){
+describe('Testing for kata2', function () {
 
-    test('Palindromo - Size: 0 | \"\" === \"\"', function () {
-        //Arrange
-        var expected = true;
+    test('palindromo - Size: 0 | \"\" === \"\"', function () {
         //Act
-        var result = palindromo("");
-        //Assert
-        expect(result).toBe(expected);
-    });
-
-
-    test('Palindromo - Size: 1 | a === a', function () {
-        //Arrange
-        //var expected = true;
-        //Act
-        var result = palindromo("");
+        const result = palindromo("");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    
-    test('Palindromo - Size: 2 | aa === aa', function () {
+    test('palindromo - Size: 1 | a === a', function () {
         //Arrange
         //var expected = true;
         //Act
-        var result = palindromo("aa");
+        const result = palindromo("");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    test('Palindromo - Size: 2 | ab != ba', function () {
+    test('palindromo - Size: 2 | aa === aa', function () {
+        //Act
+        const result = palindromo("aa");
+        //Assert
+        expect(result).toBeTruthy();
+    });
+
+    test('palindromo - Size: 2 | ab != ba', function () {
         //Arrange
        // var expected = false;
         //Act
-        var result = palindromo("ab");
+        const result = palindromo("ab");
         //Assert
         expect(result).toBeFalsy();
     });
 
-     test('Palindromo - Size: 2 | ba != ab', function () {
-        //Arrange
-        //var expected = false;
+     test('palindromo - Size: 2 | ba != ab', function () {
         //Act
-        var result = palindromo("ba");
+         const result = palindromo("ba");
         //Assert
         expect(result).toBeFalsy();
     });
 
-    test('Palindromo - Size: 2 | bb === bb', function () {
-        //Arrange
-        //var expected = true;
+    test('palindromo - Size: 2 | bb === bb', function () {
         //Act
-        var result = palindromo("bb");
+        const result = palindromo("bb");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    test('Palindromo - Size: 3 |  aba === aba', function () {
-        //Arrange
-        //var expected = true;
+    test('palindromo - Size: 3 |  aba === aba', function () {
         //Act
-        var result = palindromo("aba");
+        const result = palindromo("aba");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    test('Palindromo - Size: 3 | abc != cba', function () {
-        //Arrange
-        //var expected = false;
+    test('palindromo - Size: 3 | abc != cba', function () {
         //Act
-        var result = palindromo("abc");
+        const result = palindromo("abc");
         //Assert
         expect(result).toBeFalsy();
     });
 
-    test('Palindromo - Size: 7 | rotator === rotator', function () {
-        //Arrange
-        //var expected = true;
+    test('palindromo - Size: 7 | rotator === rotator', function () {
         //Act
-        var result = palindromo("rotator");
+        const result = palindromo("rotator");
         //Assert
         expect(result).toBeTruthy();
     });
 
-
-    test('Palindromo - Size: 7 | rovggatop != potaggvor', function () {
-        //Arrange
-        //var expected = false;
+    test('palindromo - Size: 7 | rovggatop != potaggvor', function () {
         //Act
-        var result = palindromo("rovggatop");
+        const result = palindromo("rovggatop");
         //Assert
         expect(result).toBeFalsy();
     });
-    
+
 });
 
