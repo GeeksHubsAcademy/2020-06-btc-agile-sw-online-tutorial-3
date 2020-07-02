@@ -14,85 +14,86 @@ describe('Testing for kata2', function (){
 
     test('Palindromo - Size: 1 | a === a', function () {
         //Arrange
-        var expected = true;
+        //var expected = true;
         //Act
         var result = palindromo("");
         //Assert
-        expect(result).toBe(expected);
+        expect(result).toBeTruthy();
     });
 
     
     test('Palindromo - Size: 2 | aa === aa', function () {
         //Arrange
-        var expected = true;
+        //var expected = true;
         //Act
         var result = palindromo("aa");
         //Assert
-        expect(result).toBe(expected);
+        expect(result).toBeTruthy();
     });
 
     test('Palindromo - Size: 2 | ab != ba', function () {
         //Arrange
-        var expected = false;
+       // var expected = false;
         //Act
         var result = palindromo("ab");
         //Assert
-        expect(result).toBe(expected);
+        expect(result).toBeFalsy();
     });
 
      test('Palindromo - Size: 2 | ba != ab', function () {
         //Arrange
-        var expected = false;
+        //var expected = false;
         //Act
         var result = palindromo("ba");
         //Assert
-        expect(result).toBe(expected);
+        expect(result).toBeFalsy();
     });
 
     test('Palindromo - Size: 2 | bb === bb', function () {
         //Arrange
-        var expected = true;
+        //var expected = true;
         //Act
         var result = palindromo("bb");
         //Assert
-        expect(result).toBe(expected);
+        expect(result).toBeTruthy();
     });
 
     test('Palindromo - Size: 3 |  aba === aba', function () {
         //Arrange
-        var expected = true;
+        //var expected = true;
         //Act
         var result = palindromo("aba");
         //Assert
-        expect(result).toBe(expected);
+        expect(result).toBeTruthy();
     });
 
     test('Palindromo - Size: 3 | abc != cba', function () {
         //Arrange
-        var expected = false;
+        //var expected = false;
         //Act
         var result = palindromo("abc");
         //Assert
-        expect(result).toBe(expected);
+        expect(result).toBeFalsy();
     });
 
     test('Palindromo - Size: 7 | rotator === rotator', function () {
         //Arrange
-        var expected = true;
+        //var expected = true;
         //Act
         var result = palindromo("rotator");
         //Assert
-        expect(result).toBe(expected);
+        expect(result).toBeTruthy();
     });
 
 
     test('Palindromo - Size: 7 | rovggatop != potaggvor', function () {
         //Arrange
-        var expected = false;
+        //var expected = false;
         //Act
         var result = palindromo("rovggatop");
         //Assert
-        expect(result).toBe(expected);
+        expect(result).toBeFalsy();
     });
+    
 });
 
