@@ -10,10 +10,8 @@ describe('Testing for kata2', function () {
     });
 
     test('isPalindrome - Size: 1 | a === a', function () {
-        //Arrange
-        //var expected = true;
         //Act
-        const result = isPalindrome("");
+        const result = isPalindrome("a");
         //Assert
         expect(result).toBeTruthy();
     });
@@ -26,8 +24,6 @@ describe('Testing for kata2', function () {
     });
 
     test('isPalindrome - Size: 2 | ab != ba', function () {
-        //Arrange
-       // var expected = false;
         //Act
         const result = isPalindrome("ab");
         //Assert
