@@ -67,11 +67,11 @@ describe('Testing for kata2', function (){
         expect(result).toBe(expected);
     });
 
-    test('Palindromo - Size: 3 |  abc === cba', function () {
+    test('Palindromo - Size: 3 | abc === cba', function () {
         //Arrange
         var expected = true;
         //Act
-        var result = palindromo("aba");
+        var result = palindromo("abc");
         //Assert
         expect(result).toBe(expected);
     });
