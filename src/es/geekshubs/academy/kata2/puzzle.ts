@@ -12,8 +12,9 @@
 export function palindromo(input:string) : boolean {
     var res = "";
 
-    for(var i = input.length - 1 ; i >= 0 ;i--) 
-        res = res + input.charAt(i);
+    var length = input.length - 1;
+    for(var i = length; i >= 0 ;i--) 
+        res += input.charAt(i);
 
     return res === input;
 }
