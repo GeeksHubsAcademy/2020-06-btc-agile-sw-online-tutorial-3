@@ -75,5 +75,24 @@ describe('Testing for kata2', function (){
         //Assert
         expect(result).toBe(expected);
     });
+
+    test('Palindromo - Size: 7 | rotator === rotator', function () {
+        //Arrange
+        var expected = true;
+        //Act
+        var result = palindromo("rotator");
+        //Assert
+        expect(result).toBe(expected);
+    });
+
+
+    test('Palindromo - Size: 7 | rovggatop != potaggvor', function () {
+        //Arrange
+        var expected = false;
+        //Act
+        var result = palindromo("rovggatop");
+        //Assert
+        expect(result).toBe(expected);
+    });
 });
 
