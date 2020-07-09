@@ -1,99 +1,87 @@
-import { palindromo } from "../../../../../src/es/geekshubs/academy/kata2/puzzle";
+import { isPalindrome } from "../../../../../src/es/geekshubs/academy/kata2/puzzle";
 
-describe('Testing for kata2', function (){
+describe('Testing for kata2', function () {
 
-    test('Palindromo - Size: 0 | \"\" === \"\"', function () {
-        //Arrange
-        var expected = true;
+    test('isPalindrome - Size: 0 | \"\" === \"\"', function () {
         //Act
-        var result = palindromo("");
-        //Assert
-        expect(result).toBe(expected);
-    });
-
-
-    test('Palindromo - Size: 1 | a === a', function () {
-        //Arrange
-        //var expected = true;
-        //Act
-        var result = palindromo("");
+        const result = isPalindrome("");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    
-    test('Palindromo - Size: 2 | aa === aa', function () {
-        //Arrange
-        //var expected = true;
+    test('isPalindrome - Size: 1 | a === a', function () {
         //Act
-        var result = palindromo("aa");
+        const result = isPalindrome("a");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    test('Palindromo - Size: 2 | ab != ba', function () {
-        //Arrange
-       // var expected = false;
+    test('isPalindrome - Size: 2 | aa === aa', function () {
         //Act
-        var result = palindromo("ab");
+        const result = isPalindrome("aa");
+        //Assert
+        expect(result).toBeTruthy();
+    });
+
+    test('isPalindrome - Size: 2 | ab != ba', function () {
+        //Act
+        const result = isPalindrome("ab");
         //Assert
         expect(result).toBeFalsy();
     });
 
-     test('Palindromo - Size: 2 | ba != ab', function () {
-        //Arrange
-        //var expected = false;
+     test('isPalindrome - Size: 2 | ba != ab', function () {
         //Act
-        var result = palindromo("ba");
+         const result = isPalindrome("ba");
         //Assert
         expect(result).toBeFalsy();
     });
 
-    test('Palindromo - Size: 2 | bb === bb', function () {
-        //Arrange
-        //var expected = true;
+    test('isPalindrome - Size: 2 | bb === bb', function () {
         //Act
-        var result = palindromo("bb");
+        const result = isPalindrome("bb");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    test('Palindromo - Size: 3 |  aba === aba', function () {
-        //Arrange
-        //var expected = true;
+    test('isPalindrome - Size: 3 |  aba === aba', function () {
         //Act
-        var result = palindromo("aba");
+        const result = isPalindrome("aba");
         //Assert
         expect(result).toBeTruthy();
     });
 
-    test('Palindromo - Size: 3 | abc != cba', function () {
-        //Arrange
-        //var expected = false;
+    test('isPalindrome - Size: 3 | abc != cba', function () {
         //Act
-        var result = palindromo("abc");
+        const result = isPalindrome("abc");
         //Assert
         expect(result).toBeFalsy();
     });
 
-    test('Palindromo - Size: 7 | rotator === rotator', function () {
-        //Arrange
-        //var expected = true;
+    test('isPalindrome - Size: 7 | rotator === rotator', function () {
         //Act
-        var result = palindromo("rotator");
+        const result = isPalindrome("rotator");
         //Assert
         expect(result).toBeTruthy();
     });
 
-
-    test('Palindromo - Size: 7 | rovggatop != potaggvor', function () {
-        //Arrange
-        //var expected = false;
+    test('isPalindrome - Size: 7 | rovggatop != potaggvor', function () {
         //Act
-        var result = palindromo("rovggatop");
+        const result = isPalindrome("rovggatop");
         //Assert
         expect(result).toBeFalsy();
     });
-    
+
+    test.each([
+        undefined,
+        null,
+    ])('isPalindrome - Invalid input: %s', function (input) {
+        // Act
+        const invalidInputErrorCall = () => isPalindrome(input)
+        // Assert
+        const expectedError = new TypeError('Input input: must be a string value')
+        expect(invalidInputErrorCall).toThrowError(expectedError)
+    });
+
 });
 

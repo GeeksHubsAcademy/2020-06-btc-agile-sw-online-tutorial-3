@@ -1,4 +1,6 @@
 {
+  "name": "2020-06-btc-agile-online-tutorial-3",
+  "version": "0.2.0",
   "scripts": {
     "test": "jest",
     "build": "tsc"
